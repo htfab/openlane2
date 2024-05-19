@@ -42,8 +42,8 @@
   bison,
   clang-tools_14,
   ioplace-parser,
-  rev ? "a515fc6cc97a7092efd51a28c1414e2fb4e53413",
-  sha256 ? "sha256-uZGqGhYg1ofyAd6aH94HS4sJNOJz6oWArHzUriPV3EQ=",
+  rev ? "1a5162656cfee1a6e5f30d9ecbe0b5d9d8354dae",
+  sha256 ? "sha256-gZscI8ZIc2y92XoYQfG0T6TQ6csTwYhoge6SM6+QRZI=",
 }: let
   pyenv = python3.withPackages (p:
     with p; [
@@ -59,7 +59,7 @@ in
     inherit rev;
 
     src = fetchFromGitHub {
-      owner = "The-OpenROAD-Project";
+      owner = "smunaut";
       repo = "OpenROAD";
       inherit rev;
       inherit sha256;
