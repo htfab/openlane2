@@ -19,13 +19,13 @@
   tk,
   m4,
   python3,
-  rev ? "bf67d3c2754a6cdcd6cc5fe7e69ea1fddd855dd2",
-  sha256 ? "sha256-XcpGB7jeBbC15HlMpY4JkERc0csS5CxMuSVu6dORbLY=",
+  rev ? "f2f082e62756a1ae92076b3d025435d46ea6fa36",
+  sha256 ? "sha256-zkkry4j+IYQeB1EKoAjn1f1Ff68CFaOIIN8Tjn25PyU=",
 }:
 clangStdenv.mkDerivation {
   name = "netgen";
   src = fetchFromGitHub {
-    owner = "RTimothyEdwards";
+    owner = "smunaut";
     repo = "netgen";
     inherit rev;
     inherit sha256;

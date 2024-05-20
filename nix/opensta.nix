@@ -24,15 +24,15 @@
   tcl,
   zlib,
   eigen,
-  rev ? "ee8d3d0fa23bfbc69f3e936ff884c3d30f5bfb59",
-  sha256 ? "sha256-ZLCXEmuSxGnht/ILLQSpOGHlJiDHo6gHUp+ZjV+6wxQ=",
+  rev ? "68e0f166580e660085c5ce327cc41378f8347864",
+  sha256 ? "sha256-aw6nzZgbLGzceWWgaLUeqblSKGqCsjdA8CGGW0Q1RII=",
 }:
 clangStdenv.mkDerivation rec {
   name = "opensta";
   inherit rev;
 
   src = fetchFromGitHub {
-    owner = "The-OpenROAD-Project";
+    owner = "smunaut";
     repo = "OpenSTA";
     inherit rev;
     inherit sha256;
