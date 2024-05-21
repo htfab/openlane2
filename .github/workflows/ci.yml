@@ -434,7 +434,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GH_TOKEN }}
+          password: ${{ secrets.DOCKER_TOKEN }}
       - name: Download Image (Docker/amd64)
         uses: actions/download-artifact@v3
         with:
