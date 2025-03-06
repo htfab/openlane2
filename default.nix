@@ -51,6 +51,7 @@
   rapidfuzz,
   ioplace-parser,
   poetry-core,
+  gdstk,
 }: let
   yosys-env = (yosys.withPythonPackages.override {target = yosysFull;}) (ps:
     with ps; [
@@ -107,6 +108,7 @@
         klayout.pymod
         rapidfuzz
         ioplace-parser
+        gdstk
       ]
       ++ self.includedTools;
 
