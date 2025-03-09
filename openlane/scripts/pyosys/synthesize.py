@@ -293,14 +293,6 @@ def synthesize(
         "-nokeep_asserts",
     )
     d.run_pass("rename", "-top", config["DESIGN_NAME"])
-    d.run_pass("select", "-module", config["DESIGN_NAME"])
-    try:
-        d.run_pass(
-            "show", "-format", "dot", "-prefix", os.path.join(step_dir, "hierarchy")
-        )
-    except Exception:
-        pass
-    d.run_pass("select", "-clear")
 
     lib_arguments = []
     for lib in libs:
