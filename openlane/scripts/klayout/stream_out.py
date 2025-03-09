@@ -108,6 +108,7 @@ def stream_out(
         layout_options.lefdef_config.read_lef_with_def = False
         layout_options.lefdef_config.lef_files = list(input_lefs)
         layout_options.lefdef_config.map_file = lym
+        layout_options.cell_conflict_resolution = pya.LoadLayoutOptions.CellConflictResolution.RenameCell
 
         # Load def file
         main_layout = pya.Layout()
@@ -126,7 +127,7 @@ def stream_out(
         # Load in the gds to merge
         print("[INFO] Merging GDS files…")
         for gds in input_gds_files:
-            main_layout.read(gds)
+            main_layout.read(gds, layout_options)
 
         # Copy the top level only to a new layout
         print(f"[INFO] Copying top level cell '{design_name}'…")
